@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="theme-selection">
+        <h1>Select a Theme</h1>
+        <div class="theme-buttons">
+            <div class="theme-button">
+                <img src="family.jpg" alt="Family" onclick="startTheme('family')" />
+                <span style="font-weight: bold;">Family</span>
+            </div>
+            <div class="theme-button">
+                <img src="peace.png" alt="Peace" onclick="startTheme('peace')" />
+                <span style="font-weight: bold;">სიკეთე</span>
+            </div>
+            <div class="theme-button">
+                <img src="nature.jpg" alt="Nature" onclick="startTheme('nature')" />
+                <span style="font-weight: bold;">Nature</span>
+            </div>
+            <div class="theme-button">
+                <img src="adventure.jpg" alt="Adventure" onclick="startTheme('adventure')" />
+                <span style="font-weight: bold;">Adventure</span>
+            </div>
+        </div>
+    </div>
+    
+    <div id="theme-page" style="display:none;">
+        <h1 id="theme-title"></h1>
+        <img id="theme-image" src="" alt="" class="theme-image" />
+        
+        <!-- New image for steps -->
+        <img id="step-image" src="test1.png" alt="Step Image" class="step-image" style="display:none;" /> <!-- Replace 'your-image.png' with your image file -->
+        
+        <div id="content-wrapper">
+            <div id="sentence-selection"></div>
+            <div id="selected-sentences">
+                <div class="step-section">
+                    <h2>Step 1</h2>
+                    <p id="step1-sentence"></p> <!-- Selected sentence for Step 1 -->
+                </div>
+                <div class="step-section">
+                    <h2>Step 2</h2>
+                    <p id="step2-sentence"></p> <!-- Selected sentence for Step 2 -->
+                </div>
+                <div class="step-section">
+                    <h2>Step 3</h2>
+                    <p id="step3-sentence"></p> <!-- Selected sentence for Step 3 -->
+                </div>
+            </div>
+        </div>
+        <button id="next" onclick="nextStep()" style="display:none;">Next</button>   
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
